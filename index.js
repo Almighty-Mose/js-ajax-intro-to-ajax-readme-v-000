@@ -6,7 +6,7 @@ function showRepositories(event, data) {
   document.getElementById("repositories").innerHTML = repoList;
 }
 
-function showCommits(event, data) {
+function showCommits() {
   let commits = JSON.parse(this.responseText);
   console.log(commits);
   const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.author.login + '</strong> - ' + commit.commit.message + '</li>').join('')}</ul>`;
