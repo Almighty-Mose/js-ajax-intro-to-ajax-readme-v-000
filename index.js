@@ -6,6 +6,12 @@ function showRepositories(event, data) {
   document.getElementById("repositories").innerHTML = repoList;
 }
 
+function showCommits(event, data) {
+  let commits = JSON.parse(this.responseText);
+  console.log(commits);
+  const commitList = 
+}
+
 function getRepositories() {
   const req = new XMLHttpRequest();
   req.addEventListener("load", showRepositories);
